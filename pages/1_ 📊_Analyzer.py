@@ -1,4 +1,3 @@
-from tkinter import Y
 from turtle import position
 import pandas as pd
 import numpy as np
