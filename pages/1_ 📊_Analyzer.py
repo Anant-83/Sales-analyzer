@@ -46,7 +46,7 @@ if(choice == " "):
     st.write("Select a task to start")
 elif(choice == "Display my data"):
     with st.spinner('Please wait.... We are fetching some information from your data!!!'):
-        time.sleep(2)
+        time.sleep(1)
     st.info("Your Data :-")
     # my_bar = st.progress(0)
     # for i in range(5):
@@ -55,7 +55,7 @@ elif(choice == "Display my data"):
     st.write(df.head())
 elif(choice == "Which Month has Maximum sale ?"):
     with st.spinner('Please wait.... We are fetching some information from your data!!!'):
-        time.sleep(2)
+        time.sleep(1)
     all_data = df
     nan_df = all_data[all_data.isna().any(axis=1)]
     all_data = all_data.dropna()
@@ -166,7 +166,7 @@ elif(choice  == "At what time there are maximum orders taken ?"):
 
 elif(choice  == "Which product sold out the most ?"):
     with st.spinner('Please wait.... We are fetching some information from your data!!!'):
-        time.sleep(2)
+        time.sleep(1)
     alld = df;
     product_grp = alld.groupby('Product name').sum('Quantity')
     mx_product = getid(product_grp,product_grp['Quantity'].max())
